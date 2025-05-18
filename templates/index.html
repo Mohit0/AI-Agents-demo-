@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LLM Data Access Demo</title>
+</head>
+<body>
+    <h1>LLM Department Data Access Demo</h1>
+    <form method="POST">
+        <label for="user_department">Your Department:</label>
+        <input type="text" name="user_department" id="user_department" required><br><br>
+
+        <label for="requested_department">Requested Department:</label>
+        <input type="text" name="requested_department" id="requested_department" required><br><br>
+
+        <label for="requested_data">Requested Data (all/summary):</label>
+        <input type="text" name="requested_data" id="requested_data" value="all"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if result %}
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
